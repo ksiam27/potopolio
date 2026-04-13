@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <title>김우재 | AI Dev Portfolio</title>
     <style>
-
+        /* 1. 기본 레이아웃 */
         body { font-family: 'Malgun Gothic', sans-serif; margin: 0; background: #f0f2f5; line-height: 1.6; text-align: center; }
         header, section, footer { padding: 2rem 5%; background: #fff; }
         
-
+        /* 2. 디자인 요소 */
         header { border-bottom: 2px solid #007bff; }
         section { background: none; }
         h2 { color: #007bff; border-bottom: 2px solid #007bff; display: inline-block; margin-bottom: 20px; }
 
-       
+        /* 3. 인라인 블록 레이아웃 (Grid 대신 사용) */
         .card { 
-            display: inline-block; 
+            display: inline-block; /* 요소를 글자처럼 옆으로 나열 */
             width: 240px;
             margin: 15px;
             padding: 25px; 
@@ -23,7 +23,12 @@
             border-radius: 12px; 
             border: 2px solid transparent;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
-
+            
+            /* transition 속도 변화 없이 일정하게(linear) */
+            transition: 0.2s linear; 
+            cursor: pointer;
+            text-align: left; /* 카드 내부 텍스트는 왼쪽 정렬 */
+            vertical-align: top; /* 카드들 윗줄 맞춤 */
         }
 
         footer { font-size: 0.8rem; background: #333; color: #fff; margin-top: 50px; }
@@ -61,6 +66,25 @@
         <p>© 2026 Woojae Kim. All rights reserved.</p>
     </footer>
 
+    <script>
+        const cards = document.querySelectorAll('.card');
+
+        cards.forEach(card => {
+            card.onmouseenter = () => {
+                card.style.backgroundColor = "#eef5ff";
+                card.style.borderColor = "#007bff";
+            };
+
+            card.onmouseleave = () => {
+                card.style.backgroundColor = "#fff";
+                card.style.borderColor = "transparent";
+            };
+
+            card.onclick = () => {
+                alert(card.querySelector('h3').innerText + " 상세 보기");
+            };
+        });
+    </script>
 
 </body>
 </html>
