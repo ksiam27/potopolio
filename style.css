@@ -1,0 +1,81 @@
+/* --- 기본 설정 --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    color: #1a1a1a;
+    background-color: #fafafa;
+    text-align: center; /* 전체 중앙 정렬 */
+}
+
+/* --- Vercel 스타일 메시지 --- */
+.vercel-container {
+    margin: 50px auto;
+}
+
+.vercel-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* --- 포트폴리오 메인 박스 --- */
+.deployed-site-container {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+    overflow: hidden; /* 내부 float 요소 높이 인식 */
+}
+
+/* 헤더 영역 (연블루 배경) */
+.site-hero {
+    background-color: #f1f8fe;
+    padding: 80px 20px;
+}
+
+.site-hero h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+/* 본문 영역 */
+.site-body {
+    padding: 50px 30px;
+    text-align: left; /* 본문 내용은 왼쪽 정렬 */
+}
+
+/* 프로젝트 리스트 부모 */
+.project-list {
+    margin-top: 30px;
+    overflow: hidden; /* float 해제 */
+}
+
+/* 프로젝트 카드 (min-height 없이 구현) */
+.card {
+    float: left;
+    width: 30%;          /* 3개 배치 */
+    margin: 1.66%;       /* 간격 조절 */
+    padding: 30px 20px;  /* 위아래 패딩을 늘려서 min-height 없이도 볼륨감 형성 */
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+/* 푸터 */
+.site-footer {
+    padding: 50px 0;
+    color: #999;
+    font-size: 0.9rem;
+}

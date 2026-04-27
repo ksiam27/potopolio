@@ -2,89 +2,138 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>김우재 | AI Dev Portfolio</title>
-    <style>
-        /* 1. 기본 레이아웃 */
-        body { font-family: 'Malgun Gothic', sans-serif; margin: 0; background: #f0f2f5; line-height: 1.6; text-align: center; }
-        header, section, footer { padding: 2rem 5%; background: #fff; }
-        
-        /* 2. 디자인 요소 */
-        header { border-bottom: 2px solid #007bff; }
-        section { background: none; }
-        h2 { color: #007bff; border-bottom: 2px solid #007bff; display: inline-block; margin-bottom: 20px; }
+        <title>Woojae | Deployed Portfolio</title>
+        <style>
+                        /* --- 기본 설정 --- */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
 
-        /* 3. 인라인 블록 레이아웃 (Grid 대신 사용) */
-        .card { 
-            display: inline-block; /* 요소를 글자처럼 옆으로 나열 */
-            width: 240px;
-            margin: 15px;
-            padding: 25px; 
-            background: #fff; 
-            border-radius: 12px; 
-            border: 2px solid transparent;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
-            
-            /* transition 속도 변화 없이 일정하게(linear) */
-            transition: 0.2s linear; 
-            cursor: pointer;
-            text-align: left; /* 카드 내부 텍스트는 왼쪽 정렬 */
-            vertical-align: top; /* 카드들 윗줄 맞춤 */
-        }
+            body {
+                font-family: sans-serif;
+                color: #1a1a1a;
+                background-color: #fafafa;
+                text-align: center; /* 전체 중앙 정렬 */
+            }
 
-        footer { font-size: 0.8rem; background: #333; color: #fff; margin-top: 50px; }
-    </style>
+            /* --- Vercel 스타일 메시지 --- */
+            .vercel-container {
+                margin: 50px auto;
+            }
+
+            .vercel-container h1 {
+                font-size: 2.5rem;
+                margin-bottom: 10px;
+            }
+
+            /* --- 포트폴리오 메인 박스 --- */
+            .deployed-site-container {
+                width: 90%;
+                max-width: 900px;
+                margin: 0 auto;
+                background: white;
+                border: 1px solid #eaeaea;
+                border-radius: 10px;
+                overflow: hidden; /* 내부 float 요소 높이 인식 */
+            }
+
+            /* 헤더 영역 (연블루 배경) */
+            .site-hero {
+                background-color: #f1f8fe;
+                padding: 80px 20px;
+            }
+
+            .site-hero h2 {
+                font-size: 2rem;
+                margin-bottom: 15px;
+            }
+
+            /* 본문 영역 */
+            .site-body {
+                padding: 50px 30px;
+                text-align: left; /* 본문 내용은 왼쪽 정렬 */
+            }
+
+            /* 프로젝트 리스트 부모 */
+            .project-list {
+                margin-top: 30px;
+                overflow: hidden; /* float 해제 */
+            }
+
+            /* 프로젝트 카드 (min-height 없이 구현) */
+            .card {
+                float: left;
+                width: 30%;          /* 3개 배치 */
+                margin: 1.66%;       /* 간격 조절 */
+                padding: 30px 20px;  /* 위아래 패딩을 늘려서 min-height 없이도 볼륨감 형성 */
+                border: 1px solid #eaeaea;
+                border-radius: 8px;
+                background-color: #ffffff;
+            }
+
+            .card-title {
+                font-weight: bold;
+                font-size: 1.1rem;
+                margin-bottom: 10px;
+            }
+
+            /* 푸터 */
+            .site-footer {
+                padding: 50px 0;
+                color: #999;
+                font-size: 0.9rem;
+            }
+        </style>
 </head>
 <body>
 
-    <header>
-        <h1>AI 개발자 김우재</h1>
-        <p>금오공과대학교 컴퓨터공학부 | AI 모델링 & 웹 앱 개발</p>
-    </header>
+    <div class="vercel-container">
+        <h1>Congratulations!</h1>
+    </div>
 
-    <section>
-        <h2>About Me</h2>
-        <p>데이터를 의미 있게 시각화하고, AI 모델을 웹에 이식하여 실용적인 가치를 만드는 개발자를 지망합니다.</p>
-        
-        <h2>Projects</h2>
-        <div class="container">
-            <div class="card">
-                <h3>AI Image Classifier</h3>
-                <p>실시간 사물 인식 및 분류 웹</p>
-            </div>
-            <div class="card">
-                <h3>Study Group Manager</h3>
-                <p>학업 스케줄러 프로젝트</p>
-            </div>
-            <div class="card">
-                <h3>CSS Layout Master</h3>
-                <p>Float와 Position UI 연습</p>
+    <div class="deployed-site-container">
+        <div class="site-header">
+            <span class="site-title">CS Portfolio</span>
+            <div class="site-nav">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
             </div>
         </div>
-    </section>
 
-    <footer>
-        <p>© 2026 Woojae Kim. All rights reserved.</p>
-    </footer>
+        <div class="site-hero">
+            <h2>안녕하세요, 성장하는 개발자입니다.</h2>
+            <p>컴퓨터공학을 전공하며 문제 해결을 위한 효율적인 아키텍처를 고민합니다.</p>
+        </div>
 
-    <script>
-        const cards = document.querySelectorAll('.card');
+        <div class="site-body">
+            <div id="about">
+                <h3>About Me</h3>
+                <p>알고리즘 최적화와 사용자 경험 개선에 관심이 많은 예비 개발자입니다.</p>
+            </div>
 
-        cards.forEach(card => {
-            card.onmouseenter = () => {
-                card.style.backgroundColor = "#eef5ff";
-                card.style.borderColor = "#007bff";
-            };
+            <div id="projects" class="project-list">
+                <div class="card">
+                    <div class="card-title">AI 스케줄러</div>
+                    <div class="card-desc">사용자 패턴 분석 및 일정 추천 시스템</div>
+                </div>
+                <div class="card">
+                    <div class="card-title">보안 진단 툴</div>
+                    <div class="card-desc">웹 애플리케이션 취약점 스캐닝 프로그램</div>
+                </div>
+                <div class="card">
+                    <div class="card-title">알고리즘 시각화</div>
+                    <div class="card-desc">주요 알고리즘의 동작 과정을 시각적으로 구현</div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-            card.onmouseleave = () => {
-                card.style.backgroundColor = "#fff";
-                card.style.borderColor = "transparent";
-            };
-
-            card.onclick = () => {
-                alert(card.querySelector('h3').innerText + " 상세 보기");
-            };
-        });
-    </script>
+    <div class="site-footer">
+        <p>© 2026 Woojae.Dev. All rights reserved.</p>
+    </div>
 
 </body>
 </html>
